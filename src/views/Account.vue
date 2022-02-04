@@ -131,6 +131,7 @@ export default {
                 this.account = this.account.filter(a => a.refreshBlockIndex == latestBlockIndex)
             }
             this.loading = false
+            this.refreshAccount()
         },
         async checkIsAvatarAddress() {
             let accounts = await api.getAccount({avatar:this.$route.params.address.toLowerCase()})
