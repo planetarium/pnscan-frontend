@@ -7,6 +7,8 @@ This project is a frontend project. You need to set up the backend first.
 
 https://github.com/tx0x/9cscan-cloud
 
+Node v16.5
+
 ### 1. Pull this project to local
 
 ```
