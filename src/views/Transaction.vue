@@ -19,12 +19,12 @@
           </v-row>
           <v-row class="info-item ma-0">
             <v-col cols="12" sm="3" class="item-title">Status:</v-col>
-            <v-col cols="12" sm="9" class="item-value" v-if="!loading && tx.id">
+            <v-col cols="12" sm="9" class="item-value" v-if="!loading && (tx.id || tx.status)">
               <div v-if="statusLoading"><v-progress-circular indeterminate class="mr-2" size="12" width="2"></v-progress-circular></div>
               <div v-else>
                 <v-chip label small color="success" v-if="tx.status == 'SUCCESS'">SUCCESS</v-chip>
-                <v-chip label small color="secondary" v-else-if="tx.status == 'INVALID'" @click="refreshTxStatus">INVALID</v-chip>
                 <v-chip label small color="error" v-else-if="tx.status == 'FAILED'" @click="refreshTxStatus">FAILED</v-chip>
+                <v-chip label small color="secondary" v-else-if="tx.status == 'INVALID' || tx.status == null" @click="refreshTxStatus">NOT FOUND</v-chip>
                 <v-chip label small color="warning" v-else @click="refreshTxStatus">{{tx.status}}</v-chip>
               </div>
             </v-col>
@@ -157,7 +157,10 @@ export default {
         async loadTx() {
             if (this.loading) return
             this.loading = true
-            this.tx = await this.$store.dispatch('Block/loadTransaction', this.id)
+            let tx = await this.$store.dispatch('Block/loadTransaction', this.id)
+            if (tx) {
+              this.tx = tx
+            }
             if (!this.tx.status || this.tx.status == 'STAGING' || this.tx.status == 'INVALID') {
                 this.refreshTxStatus()
             }
