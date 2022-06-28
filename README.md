@@ -1,5 +1,5 @@
-# 9cscan.com
-Nine Chronicles Blockchain Explorer web client project
+# pnscan-frontend
+The web frontend proejct for [pnscan-cloud][]. you can check main purpose of pnscan-cloud and pnscan-frontend on pnscan-cloud repo.
 
 ## Getting started
 ### 0. Setup first backend project
