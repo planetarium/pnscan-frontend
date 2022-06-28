@@ -6,8 +6,7 @@
           <div class="px-4 px-md-12">
           </div>
           <div class="px-4 px-md-1">
-            <p>9cscan is a Block Explorer and Analytics Platform for Nine Chronicles</p>
-            <p class="mt-7 hidden-sm-and-down">©2021 tx0x. All Rights Reserved.</p>
+            <p class="mt-7 hidden-sm-and-down">©2022 Planetarium. All Rights Reserved.</p>
           </div>
         </v-col>
         <v-col cols="12" md="5" offset-md="1">
@@ -18,13 +17,9 @@
               <router-link :to="{name: 'status'}" class="menu mb-md-2">Status</router-link>
             </v-col>
             <v-col cols="12" md="auto">
-              <a class="menu mb-md-2" href="https://nine-chronicles.com/" target="_blank">Nine Chronicles</a>
-              <a class="menu mb-md-2" href="https://docs.nine-chronicles.com/" target="_blank">- Docs</a>
-              <a class="menu mb-md-2" href="https://bit.ly/planetarium-discord" target="_blank">- Discord</a>
-              <a class="menu mb-md-2" href="https://github.com/planetarium" target="_blank">- Github</a>
-              <a class="menu mb-md-2" href="https://wiki.nine-chronicles.com/en/9C/FAQ" target="_blank">- FAQ</a>
+              <a class="menu mb-md-2" href="https://github.com/planetarium" target="_blank">- GitHub</a>
 
-              <p class="mt-12 text-center hidden-md-and-up">©2021 tx0x. All Rights Reserved.</p>
+              <p class="mt-12 text-center hidden-md-and-up">©2022 Planetarium. All Rights Reserved.</p>
             </v-col>
           </v-row>
         </v-col>
