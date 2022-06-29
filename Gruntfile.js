@@ -38,7 +38,7 @@ module.exports = function(grunt) {
             update_git_submodule: {
                 cmd: 'git',
                 args: [
-                    'submodule', 'update', '--init', '--recursive'
+                    'submodule', 'update', '--init', '--remote'
                 ]
             }
         },
