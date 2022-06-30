@@ -3,12 +3,6 @@
     <div class="search-section">
       <div class="page-wide-wrap py-0 px-md-8">
         <v-row>
-          <v-col cols="auto" class="hidden-sm-and-down py-2 text-right text-md-left">
-            <v-chip small label color="#f8f8f8" style="font-weight:500;font-size: 11px;" v-if="latestBlockIndex">
-              <span style="margin-right:4px;color:#444;">WNCG: ${{WncgPrice.toFixed(2)}} <span :class="WncgChange24h < 0 ? 'red--text' : 'primary--text'">({{WncgChange24h.toFixed(2)}}%)</span></span>
-              | <span class="ml-1">Block: {{latestBlockIndex}} <span class="ml-1" style="font-weight:400;color:#777;font-size:0.95em;" v-if="latestBlocks && latestBlocks[0]">({{moment(latestBlocks[0].timestamp).fromNow()}})</span></span>
-            </v-chip>
-          </v-col>
           <v-col class="py-0 d-flex justify-end">
             <div class="search-form">
               <v-text-field

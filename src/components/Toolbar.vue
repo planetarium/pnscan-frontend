@@ -7,10 +7,6 @@
             <v-btn icon @click.stop="drawer = !drawer" class="pa-0 ma-0 hidden-md-and-up">
               <v-icon color="pointblue" large>mdi-menu</v-icon>
             </v-btn>
-            <v-btn class="hidden-xs-only mx-0 px-2" text :to="{name: 'index'}">
-              <img src="../assets/icon.png" height="36" style="opacity: 0.8" />
-              <h3 class="logo theme-font ml-2">9cscan</h3>
-            </v-btn>
           </v-toolbar-title>
           <v-toolbar-items class="hidden-sm-and-down">
             <a depressed class="menu-item" @click="go('blocks')" :class="{'selected': $route.name == 'blocks' || $route.name.startsWith('block')}">
@@ -20,8 +16,6 @@
               Transactions
             </a>
           </v-toolbar-items>
-          <v-spacer class="hidden-sm-and-up"></v-spacer>
-          <v-btn text class="hidden-sm-and-up mr-8" :to="{name: 'index'}"><h3 class="logo theme-font">9cscan</h3></v-btn>
           <v-spacer class="hidden-sm-and-up"></v-spacer>
         </div>
       </v-toolbar>
@@ -42,7 +36,6 @@
 
 <script>
 import {mapActions, mapGetters} from "vuex"
-import Event from '../store/event'
 import GlobalSearch from "@/components/GlobalSearch";
 
 export default {

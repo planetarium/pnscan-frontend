@@ -12,7 +12,6 @@
             <th>From</th>
             <th v-if="involved">Involved</th>
             <th>Action</th>
-            <th v-if="detail">Avatar</th>
             <th v-if="detail">Updated<br />Addresses</th>
           </tr>
         </thead>
@@ -56,11 +55,6 @@
                 <v-btn icon x-small color="point" :to="{query: {action: action.inspection['typeId']}, ...(detail ? {} : {name: 'transactions'})}" style="width:12px;" class="mr-1"><v-icon x-small>mdi-filter-variant</v-icon></v-btn>
                 {{action.inspection['typeId']}}
               </v-btn>
-            </td>
-            <td v-if="detail">
-              <router-link :to="{name: 'avatar', params: {address: action.inspection['avatarAddress']}}" v-for="action in tx.actions" v-if="action.inspection" class="mx-1">
-                {{action.inspection['avatarAddress'] && action.inspection['avatarAddress'].substr(0, 8)}}
-              </router-link>
             </td>
             <td v-if="detail">{{tx.updatedAddresses.length}}</td>
           </tr>

@@ -1,39 +1,7 @@
 <template>
   <v-card outlined class="scoreboard">
     <v-row>
-      <v-col order="1" order-lg="1" md="4" lg="3" sm="6">
-        <div class="scoreboard-card price">
-          <div class="price-card">
-            <h5 class="scoreboard-title">WNCG Price</h5>
-            <div class="content">
-              <v-skeleton-loader type="heading" v-if="loading">
-              </v-skeleton-loader>
-              <strong v-else class="data">
-                ${{ WncgPrice.toFixed(2) }}
-                <span class="text-wncg">/WNCG</span>
-                <span
-                  :class="WncgChange24h < 0 ? 'red--text' : 'primary--text'"
-                >
-                  ({{ WncgChange24h.toFixed(2) }}%)
-                </span>
-              </strong>
-            </div>
-          </div>
-
-          <div class="price-card">
-            <h5 class="scoreboard-title">Market Cap</h5>
-            <div class="content">
-              <v-skeleton-loader type="heading" v-if="loading">
-              </v-skeleton-loader>
-              <strong v-else class="data">
-                ${{ Number(WncgMarketCap.toFixed()).toLocaleString() }}
-              </strong>
-            </div>
-          </div>
-        </div>
-      </v-col>
-
-      <v-col order="3" order-lg="2" cols="12" lg="6">
+      <v-col order="2" order-lg="1" cols="12" lg="6">
         <div class="scoreboard-card performance">
           <h5 class="scoreboard-title">Network Performance</h5>
 
@@ -82,7 +50,7 @@
         </div>
       </v-col>
 
-      <v-col order="2" order-lg="3" md="8" lg="3" sm="6">
+      <v-col order="1" order-lg="2" md="12" lg="6" sm="12">
         <div class="scoreboard-card chart" min-width="230px">
           <h5 class="scoreboard-title">Transaction History</h5>
           <tx-history-chart></tx-history-chart>

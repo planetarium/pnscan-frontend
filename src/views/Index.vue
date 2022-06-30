@@ -6,13 +6,13 @@
           <v-col md="8" class="text-left">
             <div class="search-form">
               <h2 class="search-title">
-                The Nine Chronicles Blockchain Explorer
+                Blockchain Explorer for planet-node (for testing)
               </h2>
               <div>
                 <v-text-field
                   class="mt-4"
                   outlined
-                  placeholder="Search by Block / Account Address / Tx Hash / Action Symbol"
+                  placeholder="Search by Block / Account Address / Tx Hash"
                   v-model="searchKey"
                   @keydown.enter="searchKeyword(searchKey)"
                 >
